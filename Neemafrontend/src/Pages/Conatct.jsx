@@ -1,16 +1,18 @@
 export default function Contact() {
   return (
-    <main className="pt-28 px-4 max-w-xl mx-auto">
-      <h2 className="text-3xl font-bold mb-6 text-green-800">Get in Touch</h2>
-      <form className="space-y-4">
+    <main style={{ paddingTop: '7rem', paddingLeft: '1.5rem', paddingRight: '1.5rem', maxWidth: '480px', margin: '0 auto' }}>
+      <h2 style={{ fontSize: '2.25rem', fontWeight: '800', marginBottom: '2rem', color: '#225522' }}>Get in Touch</h2>
+      <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
         <input type="text" placeholder="Name"
-               className="w-full border-gray-300 rounded-lg p-3 focus:border-green-600 focus:ring-green-600" />
+               style={{ width: '100%', border: '1px solid #ccc', borderRadius: '12px', padding: '1rem', outlineColor: '#225522', transition: 'outline-color 0.3s ease' }} />
         <input type="email" placeholder="Email"
-               className="w-full border-gray-300 rounded-lg p-3 focus:border-green-600 focus:ring-green-600" />
-        <textarea rows="4" placeholder="Message"
-                  className="w-full border-gray-300 rounded-lg p-3 focus:border-green-600 focus:ring-green-600" />
+               style={{ width: '100%', border: '1px solid #ccc', borderRadius: '12px', padding: '1rem', outlineColor: '#225522', transition: 'outline-color 0.3s ease' }} />
+        <textarea rows="5" placeholder="Message"
+                  style={{ width: '100%', border: '1px solid #ccc', borderRadius: '12px', padding: '1rem', outlineColor: '#225522', transition: 'outline-color 0.3s ease' }} />
         <button type="submit"
-                className="block w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700">
+                style={{ display: 'block', width: '100%', backgroundColor: '#225522', color: 'white', padding: '1rem', borderRadius: '12px', cursor: 'pointer', border: 'none', transition: 'background-color 0.3s ease' }}
+                onMouseEnter={e => e.currentTarget.style.backgroundColor = '#1a441a'}
+                onMouseLeave={e => e.currentTarget.style.backgroundColor = '#225522'}>
           Send Message
         </button>
       </form>
